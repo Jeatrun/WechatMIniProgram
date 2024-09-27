@@ -1,0 +1,3 @@
+/* pages/day02/WXSS/WXSS.wxss */
+
+@import "importTest.wxss";

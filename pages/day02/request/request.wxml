@@ -1,0 +1,3 @@
+<!--pages/day02/request/request.wxml-->
+<button bind:tap="getRequest">getRequest</button>
+<button bind:tap="postRequest">postRequest</button>

@@ -1,0 +1,17 @@
+<!--pages/component/button/button.wxml-->
+<view>~~~~~~~~~~~Button Type~~~~~~~~~~~</view>
+<button type="default">defaut</button>
+<button type="primary">primary </button>
+<button type="warn">warn </button>
+
+<view>~~~~~~~~~~~~Size mini~~~~~~~~~~~~~</view>
+<button size="mini" type="default">defaut </button>
+<button size="mini" type="primary">primary </button>
+<button size="mini" type="warn">warn </button>
+
+
+<view>~~~~~~~~~~~~~Plain~~~~~~~~~~~~~~~</view>
+
+<button plain size="mini" type="default">defaut </button>
+<button plain size="mini" type="primary">primary </button>
+<button plain size="mini" type="warn">warn </button>

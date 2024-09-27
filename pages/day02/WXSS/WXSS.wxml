@@ -1,0 +1,12 @@
+<!--pages/day02/WXSS/WXSS.wxml-->
+<view>~~~~~~~~~~rpx & import~~~~~~~~~~~~~</view>
+<view class="importTestView">
+  <text style="text-align: center;">if the import works ,then it will be green
+  </text>
+</view>
+
+
+<view wx:for="{{imgArr}}" wx:key="index">
+  <image class="img1" src="{{item}}"></image>
+
+</view>

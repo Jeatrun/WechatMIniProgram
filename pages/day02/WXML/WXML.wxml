@@ -1,0 +1,88 @@
+<!--pages/day02/WXML/WXML.wxml-->
+
+<!--Mustache import the infomations in data into the page-->
+<view>this is a dynamic bound info: {{info}}</view>
+<view>
+  this is a dynamic bound properties 
+  <image src="{{imgSrc}}"></image>
+</view>
+
+<rich-text nodes="<h5 style='color:blue'>this is a random number: {{randomNum}} </h5>"> </rich-text>
+
+<rich-text nodes="<h5 style='color:blue'>this random number {{randomNum>=8?'is  gte to 8':'is smaller then 8'}} </h5>"> </rich-text>
+
+<!--------------------------------------event --------------------------------->
+ <view>~~~~~~~~~~~~~~event~~~~~~~~~~~~~~~~</view>
+ <button plain type="primary" bind:tap="btnTapHandler">button*1</button>
+
+ <!-- this one below transfer a data called 'times' when the event emitted,and we could get this data in the .js file with 'e.target.dataset.times'-->
+ <button plain type="primary" bind:tap="btnTap2" data-times="{{2}}">button*2</button>
+ <!--we could use 'wx:if wx:elif wx:slse' with 'block' to make some condition judgement-->
+ <!--Note:we could only use it in view without block-->
+<block wx:if="{{count%2===0}}" >
+  <view style="text-align: center; color: lightseagreen;">
+    <text>counts: {{count}}</text>
+    <text> and it is even</text>
+  </view>
+</block>
+<block wx:else >
+  <view style="text-align: center; color: lightpink;">
+    <text>counts: {{count}}</text>
+    <text> and it is odd</text>
+  </view>
+</block>
+
+
+
+<!--------------------------------input handler----------------------------------------->
+<view>~~~~~~~~~~~~~~Input~~~~~~~~~~~~~~~</view>
+
+<view>
+<!--we could use value show the initiate text-->
+  <input value="plase enter" bindinput="inputHandler" ></input>
+  <button bind:tap="btnTap3" type="default">confirm</button>
+  <view style="text-align: center;">
+    <text>what you type is:{{outputMsg}}</text> 
+  </view>
+</view>
+
+<!---------------------------------- Hidden---------------------------------------------->
+<!--Difference between Hidden and wx:if
+  Hidden will keep the style of the component , which the display is 'none' (it still exist)
+  wx:if will not create the component if false 
+-->
+<!-- How to choose
+  if it will be often changed, then use hidden,otherwise it will cost more when creating conponents with 'if' 
+
+  if there has more than 2 conditions, then use wx:if
+-->
+<view>~~~~~~~~~~~~~~hidden~~~~~~~~~~~</view>
+<!-- the condition is the same as wx:if="{{HiddenCondition===true}}-->
+<!--Note: this won't work in block-->
+<view hidden="{{HiddenCondition}}">
+  <view style="text-align: center;background-color: lightskyblue;">
+    <text>this is a text ,you wont see this if it is true</text>
+  </view>
+</view>
+<button type="default" bind:tap="hiddenBtnHandler">Change to {{!HiddenCondition}}</button>
+
+
+<!--------------------------------list------------------------------------------------->
+<view>~~~~~~~~~~~~~~~for~~~~~~~~~~~~~~</view>
+
+<view wx:for="{{arr1}}"  style="background-color: lightskyblue;">
+index: {{index}} value: {{item}}
+</view>
+<!--we could change the name of index and items-->
+<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="value" style="background-color: lawngreen;">
+index: {{idx}} value: {{value}}
+</view>
+<!--we could use the wx:key to make it more efficiently-->
+<view>these below are using the key</view>
+<view wx:for="{{list1}}" wx:key="id" style="background-color: lightskyblue;">
+id: {{item.id}}, type: {{item.type}}, name: {{item.name}} 
+</view>
+
+<view wx:for="{{arr1}}"  wx:key="index" style="background-color: lawngreen;">
+index: {{index}} value: {{item}}
+</view>

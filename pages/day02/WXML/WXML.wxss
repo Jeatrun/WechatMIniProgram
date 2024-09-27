@@ -1,0 +1,10 @@
+/* pages/day02/WXML/WXML.wxss */
+
+/*optimize the input*/
+input{
+  border: 2px dotted lightcyan;
+  padding:5px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: lightpink;
+}

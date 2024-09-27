@@ -1,0 +1,11 @@
+.img1{
+  width:512rpx;
+  height: 512rpx;
+}
+
+.importTestView{
+
+  color: chartreuse;
+
+
+}

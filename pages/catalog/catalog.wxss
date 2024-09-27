@@ -1,0 +1,15 @@
+/* pages/catalog/catalog.wxss */
+
+.day{
+  background-color: lightcoral; 
+  text-align: center; 
+  display: flex;
+  flex-direction:  column;
+  align-items: center;
+}
+
+.folder{
+  border-radius: 20rpx;
+  background-color: lightgreen;
+  width: 90%;
+}

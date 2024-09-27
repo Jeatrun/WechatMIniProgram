@@ -1,0 +1,62 @@
+<!--pages/component/view/view.wxml-->
+
+<!--Normal view-->
+<view style=" margin-block: 3px;">
+  <view style="text-align: center; margin-bottom: 3px;">
+    <text >normal_view</text>
+  </view>
+
+  <view class="normal_view">
+    <view>A</view>
+    <view>B</view>
+    <view>C</view>
+  </view>
+
+</view>
+
+
+<!--Scrow view-->
+
+<view class="scroll_view">
+  <view style="text-align: center; margin-block: 3px;">
+    <text >scroll_view_x</text>
+    <scroll-view class="scroll_view_x" scroll-x>
+      <view>D</view>
+      <view>E</view>
+      <view>F</view>
+    </scroll-view>
+  </view>
+
+  <view style="text-align: center; margin-block: 3px;">
+    <text >scroll_view_y</text>
+    <scroll-view class="scroll_view_y" scroll-y>
+      <view>G</view>
+      <view>H</view>
+      <view>I</view>
+    </scroll-view>
+  </view>
+
+
+</view>
+
+<!-- swiper-->
+<view class="swiper_area" >
+ 
+  <view style="text-align: center; margin-block: 15px;"> 
+    <text>swiper_view</text>
+  </view>
+<!--indicator-dots :showing the dots below-->
+  <swiper class="swiper" indicator-dots autoplay circular>
+
+  <swiper-item> 
+    <view class="swiper_item">J</view>
+  </swiper-item>
+  <swiper-item > 
+    <view class="swiper_item">K</view>
+  </swiper-item>
+  <swiper-item > 
+    <view class="swiper_item">L</view>
+  </swiper-item>
+  
+  </swiper>
+</view>

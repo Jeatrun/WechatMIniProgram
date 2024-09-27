@@ -1,0 +1,29 @@
+<!--pages/catalog/catalog.wxml-->
+<view class="day">
+  <text>day01</text>
+  <view  class="folder" >
+    <text>components</text>
+
+    <view class="pages" wx:for="{{Day1}}" wx:key="id">
+      <button type="default" bind:tap="Day1_{{item.folder}}_{{item.pages}}">
+        {{item.pages}}
+      </button>
+    </view>
+  </view>
+  
+
+</view>
+
+<view class="day">
+  <text>day02</text>
+  <view  class="folder" >
+    <text>components</text>
+    <view class="pages" wx:for="{{Day2}}" wx:key="id">
+      <button type="default" bind:tap="Day2_{{item.pages}}">
+        {{item.pages}}
+      </button>
+    </view>
+  </view>
+  
+
+</view>

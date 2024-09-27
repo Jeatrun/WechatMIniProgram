@@ -1,0 +1,17 @@
+/* pages/day03/navigation/navigation.wxss */
+.h1{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.body{
+  margin-left: 30rpx;
+}
+
+input{
+  background-color: aqua;
+}
+
+navigator{
+ background-color: lightgreen; width: 80%;margin-left: 10%;
+ border: solid 5rpx lightcoral;
+}

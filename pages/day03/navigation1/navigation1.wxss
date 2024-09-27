@@ -1,0 +1,2 @@
+/* pages/day03/navigation1/navigation1.wxss */
+@import "/pages/day03/navigation/navigation.wxss";

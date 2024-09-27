@@ -1,0 +1,16 @@
+<!--pages/day03/navigation1/navigation1.wxml-->
+
+<!--delta is the steps you want to go back-->
+<navigator open-type="navigateBack" delta="1">go back to previous pages</navigator>
+<!--when delta is 1,then you could omit it-->
+<navigator open-type="navigateBack" >go back to previous pages(without delta)</navigator>
+
+<button bind:tap="goBack">go back via wx.navigateBack</button>
+
+<view style="text-align: center;flex-direction: column; display: flex; align-items: center;">
+<text >we could use the option from onload  to get the parameter</text>
+
+
+<text>name:{{name}}</text>
+<text>age:{{age}}</text>
+</view>

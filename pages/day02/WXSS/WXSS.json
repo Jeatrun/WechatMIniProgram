@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#26475d",
+  "navigationBarTitleText": "WXSS test",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f1f1f1",
+  "backgroundTextStyle":"dark"
+}

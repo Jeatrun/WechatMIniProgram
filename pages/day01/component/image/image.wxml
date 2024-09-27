@@ -1,0 +1,59 @@
+<!--pages/component/image/image.wxml-->
+
+<view class="blank_image_view">
+    <view class="blank_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a blank image </text>
+    </view>
+
+    <image class="blank_image"></image>
+
+</view>
+
+
+<scroll-view class="scroll_view" scroll-x>
+  <view class="scroll_view_item">
+    
+    <view class="normal_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a normal scale To Fill image </text>
+    </view>
+    
+    <image class="normal_image" src="kanna.jpg"></image>
+  </view>
+
+  <view class="scroll_view_item">
+  
+    <view class="aspect_Fit_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a aspect Fit image </text>
+    </view>
+   
+    <image mode="aspectFit" class="aspect_Fit_image" src="kanna.jpg"></image>
+  </view>
+
+  <view class="scroll_view_item">
+    
+    <view class="aspect_Fill_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a aspect Fill image </text>
+    </view>
+    
+    <image mode="aspectFill" class="aspect_Fit_image" src="kanna.jpg"></image>
+  </view>
+
+  <view class="scroll_view_item">
+    
+    <view class="width_Fix_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a width Fix image </text>
+    </view>
+    
+    <image mode="widthFix" class="width_Fix_image" src="kanna.jpg"></image>
+  </view>
+  <!-- this height fix is good for me :)-->
+  <view class="scroll_view_item">
+    
+    <view class="height_Fix_image_text" style="margin-block: 5px;text-align: center;">
+      <text>this is a hieght Fix image </text>
+    </view>
+    
+    <image mode="heightFix" class="height_Fix_image" src="kanna.jpg"></image>
+  </view>
+
+</scroll-view>

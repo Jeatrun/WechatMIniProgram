@@ -1,0 +1,103 @@
+<!--pages/day03/navigation/navigation.wxml-->
+<block>
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+  <view class='h1' style="font-size: large;">
+    <text>Two ways to apply page navigation </text>
+  </view>
+  <view class="h2">
+    <text>
+      (1)Declaration
+    </text>
+    <view class="body">
+        <text>- creat a 'navigator component'
+          - click the navigator to change pages 
+        </text>
+    </view>
+  </view>
+  <view class="h2">
+    <text>(2)Programming</text>
+    <view class="body">
+        <text> -use the API
+                - wx.switchTab() for tabBar
+                - wx.navigateTo() for nontabBar
+        </text>
+    </view>
+  
+  
+ 
+ 
+ 
+ 
+ 
+  </view>
+  <view class="h2">
+    <text>(2)Parameter</text>
+    <view class="body">
+        <text> -'?' to seperate url and parameter
+                - '=' to connect parameter and its data
+                - '&' to seperate defferent parameters
+        </text>
+    </view>
+  </view>
+</block>
+<view style="text-align: center; background-color: lightblue;"> ~~~~~~~~~~~~navigator~~~~~~~~~~~~~~~~
+  
+  <view style="text-align: center;">~~~~tabBar~~~~~~~~</view>
+  <view style="color: darkcyan;">
+    <!--url is the pages location , and when it want to swicth to a tabbar.then use the 'switchTab ' attribute-->
+    <!--the url must start with'/'-->
+    <navigator url="/pages/day02/WXSS/WXSS" open-type="switchTab"> NAVIGATE TO WXSS </navigator>
+  </view>
+
+  <view style="text-align: center;">~~~~nontabBar~~~~~~</view>
+  <view style="color: darkcyan;">
+  <!--when the page is not in the tabbar,then we use the 'navigate' attribute-->
+    <navigator url="/pages/day02/WXML/WXML" open-type="navigate">
+      navigate to a nontabBar page---wxml
+    </navigator>
+  <!--the attribute 'navigate' could omit it-->
+    <navigator url="/pages/day02/request/request" >
+      navigate to a nontabBar page---request
+    </navigator>
+  </view>
+
+  <view style="text-align: center;">~~go back~~~~</view>
+
+  <view style="color: darkcyan;">
+  <!--when the page is not in the tabbar,then we use the 'navigate' attribute-->
+    <navigator url="/pages/day03/navigation1/navigation1">
+      navigate to navigation1 which could navigate back
+    </navigator>
+
+  </view>
+</view>
+
+<view style="text-align: center;background-color: lightcyan;" > ~~~~~~~~~~~~API~~~~~~~~~~~~~~~~、
+  <view style="text-align: center;">~~~~TabBar~~~~</view>
+  <button type="default" bind:tap="gotoWxss">go to Wxss</button>
+  <view style="text-align: center;">~~~~nonTabBar~~~~</view>
+  <button type="default" bind:tap="gotoNavigation1">go to navigation1</button>
+</view>
+
+
+<view style="text-align: center;  background-color: lightcyan; " > ~~~~~~~~~~~~Parameter~~~~~~~~~~~~~~~~
+ 
+  <block> <!--declare-->
+  
+
+    <view style="text-align: center;">~~~~Declare~~~~</view>
+    <text>Please enter the name</text>
+    <input  bindinput="getName"></input>
+    <text>Please enter the age</text>
+    <input  bindinput="getAge"></input>
+    <navigator 
+    url='/pages/day03/navigation1/navigation1?name={{name}}&age={{age}}'>
+      Declare with parameter
+    </navigator>
+  </block>
+
+  <block><!--programming-->
+    <view style="text-align: center;">~~~~Programming~~~~</view>
+    <button bind:tap="gotoNavi1WithParam">goto Navi1 With Param</button>
+  </block>
+</view>

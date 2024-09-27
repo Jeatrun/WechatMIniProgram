@@ -1,0 +1,17 @@
+<!--pages/component/text/text.wxml-->
+<view class="text_area" >
+
+  <view class="text_view" style="margin-block: 5px; text-align: center;">
+    <text selectable>this is a normal selectable text</text>
+  </view>
+  <view class="text_view" style="margin-block: 5px; text-align: center;">
+    <text >this is a normal unselectable text</text>
+  </view>
+ 
+</view>
+
+
+<view class="rich-text_area" style="margin-block: 5px; text-align: center;">
+<rich-text nodes="<h1 style='color:blue'>Rich-text<h1>"></rich-text>
+
+</view>
